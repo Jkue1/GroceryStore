@@ -24,16 +24,22 @@ do
   cout<<"\n (Q)uit";
   cout<<"\nYour choice (A/Q): ";
 cin>> input;  
+  
   if (input == 'a' || input == 'A')
   {cout<<"What is the item?\n";
   cin>> stuff;
   if ( numItems > 4)
   {cout<<"You'll need a bigger list!\n";}
   else {list[numItems] = stuff; numItems = numItems + 1;}
-}}
+}
+ 
+
+}
 while (!(input == 'q' || input == 'Q'));
 
-
+cout<<"==ITEMS TO BUY==\n";
+    for (int num= 0; num < 5; num++)
+    {cout<<num+1<< " " <<list[num]<<endl;}
 
   return 0;
 }
