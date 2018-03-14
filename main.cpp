@@ -1,18 +1,18 @@
 // Author: Joshua Kue
-#include<iostream>
-#include<string>
-#include<vector>
+#include <iostream>
+#include <string>
+#include <vector>
 using namespace std;
 
 
 int main()
 {
-
-  vector <string> list;
+  string stuff;  
+  vector< string > list;
   //string list[5]; //array of 5 strings
   int numItems = 0;
   char input;
-  string stuff;
+
   
 
 do
@@ -29,9 +29,17 @@ do
   if (input == 'a' || input == 'A')
   {
     cout<<"What is the item?\n";
-    cin>>stuff; 
-    list.push_back(stuff);
-  }
+    while (cin>>stuff)
+    {
+        if (stuff == "q" || stuff == "Q")
+        {
+            break;
+        }
+        list.push_back(stuff);
+    }
+  }  
+ 
+   
  
 }
 while (!(input == 'q' || input == 'Q'));
@@ -39,7 +47,7 @@ while (!(input == 'q' || input == 'Q'));
 cout<<"==ITEMS TO BUY==\n";
 for (int i=0; i<list.size(); i++)
 {
-cout<<list[stuff];
+    cout<<list[i]<<endl;
 }
 
   return 0;
