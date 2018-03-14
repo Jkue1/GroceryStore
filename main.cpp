@@ -1,18 +1,19 @@
 // Author: Joshua Kue
 #include<iostream>
 #include<string>
+#include<vector>
 using namespace std;
 
 
 int main()
 {
 
-
-  string list[5]; //array of 5 strings
+  vector <string> list;
+  //string list[5]; //array of 5 strings
   int numItems = 0;
   char input;
-string stuff;
-
+  string stuff;
+  
 
 do
 {
@@ -23,23 +24,23 @@ do
   cout<<"\n (A)dd an item";
   cout<<"\n (Q)uit";
   cout<<"\nYour choice (A/Q): ";
-cin>> input;  
+  cin>> input;  
   
   if (input == 'a' || input == 'A')
-  {cout<<"What is the item?\n";
-  cin>> stuff;
-  if ( numItems > 4)
-  {cout<<"You'll need a bigger list!\n";}
-  else {list[numItems] = stuff; numItems = numItems + 1;}
-}
+  {
+    cout<<"What is the item?\n";
+    cin>>stuff; 
+    list.push_back(stuff);
+  }
  
-
 }
 while (!(input == 'q' || input == 'Q'));
 
 cout<<"==ITEMS TO BUY==\n";
-    for (int num= 0; num < 5; num++)
-    {cout<<num+1<< " " <<list[num]<<endl;}
+for (int i=0; i<list.size(); i++)
+{
+cout<<list[stuff];
+}
 
   return 0;
 }
