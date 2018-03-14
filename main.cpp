@@ -10,7 +10,7 @@ int main()
   string stuff;  
   vector< string > list;
   //string list[5]; //array of 5 strings
-  int numItems = 0;
+  int numItems = 1;
   char input;
 
   
@@ -49,7 +49,8 @@ else
     cout<<"==ITEMS TO BUY==\n";
     for (int i=0; i<list.size(); i++)
     {
-        cout<<list[i]<<endl;
+       
+       cout<<numItems++<<" "<<list[i]<<endl;
     }
 }
 
