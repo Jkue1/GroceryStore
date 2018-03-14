@@ -44,10 +44,18 @@ do
 }
 while (!(input == 'q' || input == 'Q'));
 
-cout<<"==ITEMS TO BUY==\n";
-for (int i=0; i<list.size(); i++)
+if (list.empty())
 {
-    cout<<list[i]<<endl;
+    cout<<"No items to buy!\n";
+}
+
+else 
+{
+    cout<<"==ITEMS TO BUY==\n";
+    for (int i=0; i<list.size(); i++)
+    {
+        cout<<list[i]<<endl;
+    }
 }
 
   return 0;
