@@ -29,14 +29,9 @@ do
   if (input == 'a' || input == 'A')
   {
     cout<<"What is the item?\n";
-    while (cin>>stuff)
-    {
-        if (stuff == "q" || stuff == "Q")
-        {
-            break;
-        }
-        list.push_back(stuff);
-    }
+    cin>>stuff;
+    list.push_back(stuff);
+    
   }  
  
    
